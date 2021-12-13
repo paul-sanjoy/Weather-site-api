@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+:root {
+    --primary-blue: rgb(63, 115, 255);
+    --background-blue: rgb(223, 232, 255);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-container {
+    width: 80vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+}
+
+
+.search-container {
+    width: 15rem;
+    height: 2rem;
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 3rem;
+    padding: 0 3rem;
+}
+
+.search-bar {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid var(--background-blue);
+    border-right: none;
+    outline: none;
+    padding-left: 1rem;
+}
+
+.search-button {
+    width: 4rem;
+    height: 100%;
+    background-color: var(--background-blue);
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 3rem;
+    padding: 0 3rem;
+}
+
+.card {
+    width: 100%;
+    height: 70vh;
+    border-radius: 20px;
+    background-color: var(--primary-blue);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+    color: white;
+
+}
+
+.card .city {
+    width: 100%;
+    display: flex;
+    margin-bottom: 5rem;
+
+
+}
+
+.card .city i {
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+.card .city h3 {
+    font-size: 1rem;
+}
+
+.card .info {
+    width: 100%;
+}
+
+.card .info .date {
+    text-align: center;
+    font-size: 1rem;
+
+}
+
+.card .info .temp {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+
+.card .info .details {
+    text-align: center;
+    display: inline;
+}
+
+.card .info .details .status {
+    margin-bottom: 1rem;
+}
+
+.card .info .details .wind,
+.card .info .details .hum {
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .info .details i {
+    margin: 2px;
+}
+
+.card .info .details h3 {
+    width: 50%;
+    font-size: 1rem;
+}
+
+.card.loading {
+    visibility: hidden;
+}
+
+.card.loading::after {
+    visibility: visible;
+    content: "Loading...";
+    color: var(--primary-blue);
+    position: absolute;
+    top: 15rem;
+    left: 16rem;
+}
